@@ -1,0 +1,3 @@
+- data.menu.news_stream.each do |news_item|
+    ul.timeline
+      = partial("partials/timelines/timeline_item" ,locals: { item: news_item})

@@ -1,0 +1,48 @@
+menu:
+  - Home
+  # - Contact Us
+  # - About Us
+index_carousel:
+  - image: images/slide1.jpg
+    banner_text: Making data light
+    action_text: Find out how!
+    action_link: '#'
+  - image: images/slide2.jpg
+    banner_text: Making data light
+    action_text: Find out how!
+    action_link: '#'
+services_menu:
+  - image: images/service1.jpg
+    service_name: Inventory Control
+    service_toast: With 1000s of products in the product line, it is humanely impossible to stock the right levels at the right time.
+    action_text: Read More
+    action_link: '#'
+  - image: images/service2.jpg
+    service_name: Supplier management
+    service_toast: Manage your supplier relations  objectively and gain operational traction.
+    action_text: Read More
+    action_link: '#'
+  - image: images/service3.jpg
+    service_name: Networth maintenance
+    service_toast: Maintain your networth
+    action_text: Read More
+    action_link: '#'
+contact:
+  email: info@delium.co
+  twitter: delium_tweet
+  telephone: +91 9566082416
+news_stream:
+  - type: blog
+    title: Parse like a json
+    url : http://example.com
+    time:  2016-06-05
+    description: >
+      # this is a heading in markdown
+      *And a title*
+  - type: news
+    title: Company incorporated
+    url : http://delium.co
+    time:  2016-06-05
+    description: |
+      # this is a heading in markdown
+      ## And a title

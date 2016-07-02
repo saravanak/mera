@@ -1,0 +1,83 @@
+---
+title: "Home"
+---
+
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+javascript:
+  var config = {
+    apiKey: "AIzaSyDeUhcGB11jos3rYTpYi8J8Ommu7Ql_oA4",
+    authDomain: "frontal-lobe.firebaseapp.com",
+    databaseURL: "https://frontal-lobe.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+  firebase.auth().signInAnonymously().catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+  console.log(error);
+  });
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+  // User is signed in.
+  var isAnonymous = user.isAnonymous;
+  var uid = user.uid;
+  // ...
+  } else {
+  // User is signed out.
+  // ...
+  }
+  // ...
+  });
+  function subscribe(){
+    console.log($('#subscription-form'));
+    var eMail = $('#subscription-form').find('input.name-control').val();
+    firebase.database().ref("test").push(eMail, function() {
+      window.alert('Successfully registered!')
+      $('#subscription-form').find('input.name-control').val('');
+    });
+    return false;
+  }
+
+.content-sec
+  .row
+    div class="content"
+      h2
+        |Howdy?
+      p
+        | We are Delium. We are a technology startup from India.
+          Our mission is to build the products that businesses will crave for and to
+          democratize technology. We believe that Moore's law should apply for software too!
+      p
+        | We are booting up to build a new age product for the retail industry. Explore this site
+          to know more about us!
+
+.[class="content-sec verticals-banner"]
+  == partial 'partials/index_carousels'
+
+.content-sec
+  == partial 'partials/services_menu'
+
+
+.content-long-sec
+  .row
+    div class="content"
+      .row
+        #launcher
+          h2
+           | Our Product
+          p
+            | The Eye
+            blockquote
+              p
+               | TIGER, tiger, burning bright <br/>
+                In the forests of the night, <br/>
+                What immortal hand or eye <br/>
+                Could frame thy <i>fearful symmetry? </i><br/>
+        == partial 'partials/rocket/rocket'
+</div>
+
+/ == partial 'partials/timelines/reference'
+==partial 'partials/newsletter'

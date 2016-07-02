@@ -1,0 +1,15 @@
+
+.newsletter
+  .row
+    .col-md-12
+      h2 class="white"
+        | Subscribe to our newsletter
+      p
+        |Sign up for our mailing list to get latest updates and offers.
+    div class="large-2 medium-2 columns hide-for-small"
+     | &nbsp;
+    div class="col-md-8 col-md-offset-2 "
+     form onSubmit="event.preventDefault(); subscribe()" id="subscription-form" method="post"
+        input type='hidden' name='redirect_to' value='/'
+        input type='text' placeholder='Enter your email here' class="name-control" name='test'
+        input type='submit' value='Subscribe'

@@ -1,0 +1,12 @@
+.services
+- data.menu.services_menu.each_with_index do |f, index|
+      div class="col-md-4 medium-4 small-12 columns"
+        div class="img-box"
+          img  class="img-responsive" src=f.image alt="Service1"
+        div class="txt-box text-center"
+          h3
+           =f.service_name
+          p
+           =f.service_toast
+          a href=f.action_link class="button radius"
+            = f.action_text

@@ -1,0 +1,17 @@
+header#header
+
+.container-fluid
+  .row
+    nav class="navbar navbar-default navbar-fixed-top "
+      a class="navbar-text" id="logo" href="#"
+        img src="images/delium_hexagon.png" style="height: 75px;"
+        /img src="images/delium.svg" style="width: 150px;"
+      .container-fluid
+        .navbar-header
+          == partial "partials/collapsible_button"
+        div class="collapse navbar-collapse top-bar-section" id="bs-example-navbar-collapse-2"
+          ul class="nav navbar-nav navbar-right"
+            - data.menu.menu.each do |f|
+              li
+                a href=('#/'+f.downcase.gsub(' ', '-'))
+                  =f
